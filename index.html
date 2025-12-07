@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz SIGIBE - Gestión de Proyectos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Quiz de Gestión de Proyectos</h1>
+            <p class="subtitle">Sistema SIGIBE - Evaluación de Conocimientos</p>
+        </header>
+
+        <div class="score-board">
+            <div class="score-item">
+                <span class="label">Pregunta:</span>
+                <span class="value" id="current-question">0</span>
+                <span class="total">/ <span id="total-questions">0</span></span>
+            </div>
+            <div class="score-item">
+                <span class="label">Correctas:</span>
+                <span class="value correct" id="correct-count">0</span>
+            </div>
+            <div class="score-item">
+                <span class="label">Incorrectas:</span>
+                <span class="value incorrect" id="incorrect-count">0</span>
+            </div>
+        </div>
+
+        <div class="quiz-container" id="quiz-container">
+            <div class="question-card" id="question-card">
+                <div class="question-header">
+                    <span class="question-type" id="question-type"></span>
+                    <span class="question-category" id="question-category"></span>
+                </div>
+                <h2 class="question-text" id="question-text"></h2>
+                <div class="options-container" id="options-container"></div>
+                <button class="btn-submit" id="btn-submit">Verificar Respuesta</button>
+            </div>
+
+            <div class="feedback" id="feedback"></div>
+        </div>
+
+        <div class="results-container hidden" id="results-container">
+            <div class="results-card">
+                <h2>🎉 ¡Quiz Completado!</h2>
+                <div class="final-score">
+                    <div class="score-circle">
+                        <span class="percentage" id="final-percentage">0%</span>
+                    </div>
+                    <p class="score-message" id="score-message"></p>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-value correct" id="final-correct">0</span>
+                        <span class="stat-label">Correctas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value incorrect" id="final-incorrect">0</span>
+                        <span class="stat-label">Incorrectas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="final-total">0</span>
+                        <span class="stat-label">Total</span>
+                    </div>
+                </div>
+                <button class="btn-restart" id="btn-restart">🔄 Reintentar Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
