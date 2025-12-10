@@ -33,8 +33,9 @@ function playClickSound() {
     playSound(400, 0.05, 'square');
 }
 
-// Banco de preguntas
+// Banco de preguntas completo - 90 PREGUNTAS TOTALES
 const questions = [
+    // DOCUMENTO 1 - Preguntas 1-20
     {
         type: "multiple",
         category: "Conceptos Fundamentales",
@@ -234,6 +235,706 @@ const questions = [
         question: "Complete: Una buena métrica de calidad debe contener el Atributo, la Métrica y el Valor _____.",
         answer: "meta",
         hints: ["Objetivo", "Target en inglés", "Umbral de aceptación"]
+    },
+
+    // DOCUMENTO 2 - Preguntas 21-40
+    {
+        type: "multiple",
+        category: "Estimación de Esfuerzo",
+        question: "¿Cómo se convierte el esfuerzo en duración?",
+        options: [
+            "Multiplicando el esfuerzo por el costo",
+            "Considerando cuántos recursos (personas) se asignarán y su productividad",
+            "Dividiendo el esfuerzo entre los días del proyecto",
+            "Sumando todas las tareas del proyecto"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Técnicas de Estimación",
+        question: "Complete: La Estimación _____ es más adecuada cuando la EDT está bien hecha, estimando cada paquete de trabajo y sumándolos.",
+        answer: "ascendente",
+        hints: ["Bottom-Up en inglés", "De abajo hacia arriba", "Suma de paquetes"]
+    },
+    {
+        type: "multiple",
+        category: "Técnicas de Estimación",
+        question: "¿Cuál de las siguientes es una técnica de estimación que utiliza modelos matemáticos basados en datos históricos?",
+        options: [
+            "Juicio de expertos",
+            "Estimación paramétrica",
+            "Estimación por analogía",
+            "Estimación descendente"
+        ],
+        correct: 1
+    },
+    {
+        type: "multiple",
+        category: "Metodologías de Estimación",
+        question: "¿Cuándo se realiza la estimación en las Metodologías Clásicas como Cascada?",
+        options: [
+            "Durante cada sprint",
+            "Al final del proyecto",
+            "Al inicio del proyecto, intentando estimar todo de una vez",
+            "Durante la fase de pruebas"
+        ],
+        correct: 2
+    },
+    {
+        type: "complete",
+        category: "Metodologías Ágiles",
+        question: "Complete: En Scrum, la estimación es una actividad _____ y liviana que ocurre al inicio de cada iteración corta.",
+        answer: "continua",
+        hints: ["No es única", "Se repite", "Cada sprint"]
+    },
+    {
+        type: "multiple",
+        category: "EDT/WBS",
+        question: "¿Cómo se garantiza que la EDT cubre el 100% del alcance definido?",
+        options: [
+            "Contando todas las tareas del proyecto",
+            "Verificando que todos los RF importantes estén representados en algún paquete de trabajo",
+            "Sumando las horas de todos los paquetes",
+            "Consultando con el cliente final"
+        ],
+        correct: 1
+    },
+    {
+        type: "multiple",
+        category: "Arquitectura de Software",
+        question: "Si un RNF requiere disponibilidad 24/7 (uptime 99.5%), ¿qué decisión arquitectónica se debe tomar?",
+        options: [
+            "Usar un único servidor potente",
+            "Implementar redundancia con múltiples servidores y balanceador de carga",
+            "Aumentar la memoria RAM del servidor",
+            "Contratar más desarrolladores"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Diagramas UML",
+        question: "Complete: En un Diagrama de Componentes, el símbolo _____ representa una interfaz que el componente requiere (usa).",
+        answer: "socket",
+        hints: ["C— símbolo", "Lo que necesita", "Interfaz requerida"]
+    },
+    {
+        type: "multiple",
+        category: "Diagrama de Despliegue",
+        question: "¿Qué representa un 'Nodo' en un Diagrama de Despliegue?",
+        options: [
+            "Un componente de software",
+            "Una clase del sistema",
+            "La infraestructura de hardware o entorno de ejecución",
+            "Una interfaz de usuario"
+        ],
+        correct: 2
+    },
+    {
+        type: "multiple",
+        category: "Gestión de Riesgos",
+        question: "Según la Fórmula Maestra del PMBOK para redactar riesgos, ¿qué representa la CAUSA?",
+        options: [
+            "Un evento futuro incierto",
+            "Un hecho presente o verdad actual",
+            "El impacto en el proyecto",
+            "La probabilidad de ocurrencia"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Análisis de Riesgos",
+        question: "Complete: El Nivel de Riesgo (Severidad) se calcula multiplicando la Probabilidad por el _____.",
+        answer: "impacto",
+        hints: ["Consecuencia", "Daño potencial", "Segunda dimensión"]
+    },
+    {
+        type: "multiple",
+        category: "Estrategias de Riesgos",
+        question: "¿Qué estrategia de respuesta a riesgos implica tomar acciones proactivas para reducir la probabilidad y/o el impacto?",
+        options: [
+            "Evitar",
+            "Transferir",
+            "Mitigar",
+            "Aceptar"
+        ],
+        correct: 2
+    },
+    {
+        type: "multiple",
+        category: "Estrategias de Riesgos",
+        question: "¿Cuál es un ejemplo de TRANSFERIR un riesgo?",
+        options: [
+            "Implementar backups automáticos cada hora",
+            "Contratar un servicio de nube con SLA garantizado",
+            "Cambiar el plan del proyecto",
+            "No hacer nada y asumir el riesgo"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Gestión de la Calidad",
+        question: "Complete: El Aseguramiento de la Calidad (SQA) está enfocado en el _____ para prevenir defectos.",
+        answer: "proceso",
+        hints: ["Cómo lo hacemos", "Prevención", "No es el producto"]
+    },
+    {
+        type: "multiple",
+        category: "Métricas de Calidad",
+        question: "¿Cuántos elementos debe contener una Métrica de Calidad objetiva y cuantificable?",
+        options: [
+            "Dos elementos",
+            "Tres elementos",
+            "Cuatro elementos",
+            "Cinco elementos"
+        ],
+        correct: 2
+    },
+    {
+        type: "multiple",
+        category: "Métricas de Calidad",
+        question: "¿Cuál de los siguientes NO es un elemento de una Métrica de Calidad?",
+        options: [
+            "Atributo",
+            "Valor Meta (Target)",
+            "Método de Medición",
+            "Presupuesto del proyecto"
+        ],
+        correct: 3
+    },
+    {
+        type: "complete",
+        category: "Modelo en V",
+        question: "Complete: El Modelo en V ilustra que para cada etapa de definición, existe una etapa de _____ correspondiente.",
+        answer: "verificación",
+        hints: ["Prueba", "Validación", "Testing"]
+    },
+    {
+        type: "multiple",
+        category: "Pruebas de Sistema",
+        question: "¿Qué verifican las Pruebas de Sistema (Nivel 3)?",
+        options: [
+            "Solo los requisitos funcionales",
+            "Solo la interfaz de usuario",
+            "Que el sistema cumpla con los RF y RNF especificados",
+            "La satisfacción del usuario final"
+        ],
+        correct: 2
+    },
+    {
+        type: "multiple",
+        category: "Casos de Prueba",
+        question: "¿Qué se busca al diseñar pruebas para 'Caminos Alternativos/Error'?",
+        options: [
+            "Verificar que el sistema funciona con datos correctos",
+            "Probar escenarios que intentan 'romper' el sistema",
+            "Validar la interfaz de usuario",
+            "Confirmar que el código está bien documentado"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Casos de Prueba",
+        question: "Complete: Un componente esencial de un Caso de Prueba es el _____ asociado para garantizar la trazabilidad.",
+        answer: "caso de uso",
+        hints: ["Requisito funcional", "Historia de usuario", "Funcionalidad"]
+    },
+
+    // DOCUMENTO 3 - Preguntas 41-90
+    {
+        type: "multiple",
+        category: "Arquitectura de Software",
+        question: "¿Con qué concepto se compara la Arquitectura de Software?",
+        options: [
+            "Con un organigrama empresarial",
+            "Con los planos estructurales de un edificio",
+            "Con un diagrama de flujo",
+            "Con una base de datos"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Arquitectura de Software",
+        question: "Complete: La arquitectura no se elige por _____, sino que se diseña para satisfacer los RNF.",
+        answer: "moda",
+        hints: ["Tendencia", "No por popularidad", "Según necesidades reales"]
+    },
+    {
+        type: "multiple",
+        category: "RNF Seguridad",
+        question: "¿Qué componentes específicos exige un RNF de Seguridad crítico?",
+        options: [
+            "Solo encriptación de datos",
+            "Un firewall y antivirus",
+            "Servicio de Autenticación y Servicio de Autorización (RBAC)",
+            "Solo contraseñas fuertes"
+        ],
+        correct: 2
+    },
+    {
+        type: "multiple",
+        category: "RNF Rendimiento",
+        question: "Si el RNF de Rendimiento es crítico, ¿qué técnicas pueden ser necesarias?",
+        options: [
+            "Aumentar el personal",
+            "Usar caché o separar BD de reportes en servidor diferente",
+            "Reducir funcionalidades",
+            "Cambiar el lenguaje de programación"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Arquitectura Monolítica",
+        question: "Complete: En la Arquitectura Monolítica, todo se construye como una sola unidad _____.",
+        answer: "indivisible",
+        hints: ["No se puede separar", "Todo junto", "Unidad completa"]
+    },
+    {
+        type: "multiple",
+        category: "Arquitectura en 3 Capas",
+        question: "¿Cuáles son las tres capas lógicas horizontales de la Arquitectura en 3 Capas?",
+        options: [
+            "Cliente, Servidor y Base de Datos",
+            "Presentación, Lógica de Negocio y Acceso a Datos",
+            "Frontend, Backend y Storage",
+            "Input, Processing y Output"
+        ],
+        correct: 1
+    },
+    {
+        type: "multiple",
+        category: "Microservicios",
+        question: "¿Qué estilo arquitectónico ofrece máxima escalabilidad al descomponer la aplicación en servicios pequeños e independientes?",
+        options: [
+            "Arquitectura Monolítica",
+            "Arquitectura en Capas",
+            "Arquitectura de Microservicios",
+            "Arquitectura Cliente-Servidor"
+        ],
+        correct: 2
+    },
+    {
+        type: "complete",
+        category: "Microservicios",
+        question: "Complete: La principal complejidad de los Microservicios es que es mucho más complejo de _____ y monitorear.",
+        answer: "gestionar",
+        hints: ["Administrar", "Controlar", "Manejar"]
+    },
+    {
+        type: "multiple",
+        category: "Diagramas UML",
+        question: "¿Qué dos diagramas UML se utilizan para documentar la arquitectura de software?",
+        options: [
+            "Diagrama de Clases y Diagrama de Secuencia",
+            "Diagrama de Casos de Uso y Diagrama de Estados",
+            "Diagrama de Componentes y Diagrama de Despliegue",
+            "Diagrama de Actividades y Diagrama de Objetos"
+        ],
+        correct: 2
+    },
+    {
+        type: "multiple",
+        category: "Diagrama de Componentes",
+        question: "¿Cuál es el propósito del Diagrama de Componentes?",
+        options: [
+            "Mostrar el flujo de datos",
+            "Mostrar cómo se organiza lógicamente el software y sus dependencias",
+            "Mostrar la infraestructura física",
+            "Mostrar los casos de uso"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Diagrama de Despliegue",
+        question: "Complete: Un _____ es el archivo de software real que se despliega dentro de un nodo.",
+        answer: "artefacto",
+        hints: ["Archivo ejecutable", "Software deployable", "Ej: .war, .js"]
+    },
+    {
+        type: "multiple",
+        category: "Documentación de Arquitectura",
+        question: "¿Qué elementos debe documentar la Sección 4 del PGP relativa a la Arquitectura?",
+        options: [
+            "Solo el diagrama de componentes",
+            "Estilo Arquitectónico, Diagrama de Componentes y Diagrama de Despliegue",
+            "Solo la justificación técnica",
+            "Los requisitos funcionales"
+        ],
+        correct: 1
+    },
+    {
+        type: "multiple",
+        category: "Justificación Arquitectónica",
+        question: "Si se elige la Arquitectura Cliente-Servidor de 3 capas, ¿cuál es una justificación técnica clave?",
+        options: [
+            "Es la más barata",
+            "Es la más moderna",
+            "Proporciona buena separación de responsabilidades, permitiendo cambiar la UI sin tocar la lógica",
+            "Es la más rápida"
+        ],
+        correct: 2
+    },
+    {
+        type: "complete",
+        category: "Aseguramiento de Calidad",
+        question: "Complete: El SQA tiene como objetivo _____ defectos.",
+        answer: "prevenir",
+        hints: ["Evitar", "Anticipar", "No detectar"]
+    },
+    {
+        type: "multiple",
+        category: "Control de Calidad",
+        question: "¿Cuál es el enfoque del Control de Calidad (SQC)?",
+        options: [
+            "El proceso de desarrollo",
+            "El producto y detectar defectos",
+            "La gestión del equipo",
+            "La documentación"
+        ],
+        correct: 1
+    },
+    {
+        type: "multiple",
+        category: "Métricas de Calidad",
+        question: "¿Qué se debe hacer para transformar un RNF en un valor cuantificable y controlable?",
+        options: [
+            "Ignorarlo hasta las pruebas",
+            "Traducirlo en una Métrica de Calidad",
+            "Asignarlo a un desarrollador",
+            "Agregarlo al backlog"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Componentes de Métrica",
+        question: "Complete: Una métrica de calidad incluye Atributo, Métrica, Valor Meta y Método de _____.",
+        answer: "medición",
+        hints: ["Cómo obtener el dato", "Forma de medir", "Técnica de evaluación"]
+    },
+    {
+        type: "multiple",
+        category: "Métricas de Disponibilidad",
+        question: "¿Cuál es un ejemplo de Métrica de Calidad relacionada con disponibilidad?",
+        options: [
+            "100% de código comentado",
+            "Disponibilidad del 99.9% mensual (Máximo 43 minutos de inactividad/mes)",
+            "Cero errores de compilación",
+            "10 usuarios simultáneos"
+        ],
+        correct: 1
+    },
+    {
+        type: "multiple",
+        category: "Modelo en V",
+        question: "¿Qué ilustra el Modelo en V de la Estrategia de Pruebas?",
+        options: [
+            "La estructura organizacional",
+            "La relación entre cada fase de desarrollo y su fase de pruebas correspondiente",
+            "El flujo de trabajo del equipo",
+            "La arquitectura del sistema"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Pruebas de Sistema",
+        question: "Complete: Las Pruebas de Sistema verifican el sistema contra los requisitos _____ y _____.",
+        answer: "rf y rnf",
+        hints: ["Funcionales y No Funcionales", "Dos tipos", "Requisitos técnicos"]
+    },
+    {
+        type: "multiple",
+        category: "Pruebas de Aceptación",
+        question: "¿Qué nivel de prueba verifica que el software resuelve el problema del negocio?",
+        options: [
+            "Pruebas Unitarias",
+            "Pruebas de Integración",
+            "Pruebas de Sistema",
+            "Pruebas de Aceptación de Usuario (UAT)"
+        ],
+        correct: 3
+    },
+    {
+        type: "multiple",
+        category: "Cascada - Desventaja",
+        question: "¿Cuál es la principal desventaja del enfoque Cascada en pruebas?",
+        options: [
+            "Es muy rápido",
+            "Si se encuentra un error grave en UAT (tarde), corregirlo es muy costoso",
+            "No tiene documentación",
+            "No permite pruebas"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Modelo en V Ágil",
+        question: "Complete: En Ágil, en lugar de una Gran V secuencial, se ejecutan muchas V _____ y rápidas.",
+        answer: "pequeñas",
+        hints: ["Mini V", "Cortas", "Cada sprint"]
+    },
+    {
+        type: "multiple",
+        category: "Sprint Review",
+        question: "¿Qué actividad de prueba se lleva a cabo al final de cada Sprint (Sprint Review)?",
+        options: [
+            "Pruebas Unitarias",
+            "Pruebas de Integración",
+            "Pruebas de Aceptación (UAT)",
+            "Pruebas de Carga"
+        ],
+        correct: 2
+    },
+    {
+        type: "complete",
+        category: "Caso de Prueba",
+        question: "Complete: Un Caso de Prueba es un conjunto de _____ bajo las cuales se determinará si una funcionalidad cumple con los requisitos.",
+        answer: "condiciones",
+        hints: ["Circunstancias", "Situaciones", "Escenarios"]
+    },
+    {
+        type: "multiple",
+        category: "Precondiciones",
+        question: "¿Qué se debe especificar en las 'Precondiciones' de un Caso de Prueba?",
+        options: [
+            "Lo que el sistema debería hacer",
+            "El estado del sistema necesario antes de empezar la prueba",
+            "Los errores esperados",
+            "El tiempo de ejecución"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Resultado Esperado",
+        question: "Complete: El Resultado Esperado es lo que el sistema debería hacer si todo está _____.",
+        answer: "bien",
+        hints: ["Correcto", "Funciona OK", "Sin errores"]
+    },
+    {
+        type: "multiple",
+        category: "Tipos de Escenarios",
+        question: "Mencione dos tipos de escenarios a probar además del 'Camino Feliz'.",
+        options: [
+            "Caminos Rápidos y Caminos Lentos",
+            "Caminos Alternativos o Excepciones con datos inválidos",
+            "Caminos Directos e Indirectos",
+            "Caminos Simples y Complejos"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Plan de Pruebas",
+        question: "Complete: El propósito del Plan de Pruebas de Alto Nivel es definir la estrategia de _____ y validación.",
+        answer: "verificación",
+        hints: ["Testing", "Comprobación", "Pruebas"]
+    },
+    {
+        type: "multiple",
+        category: "Pruebas de Integración",
+        question: "¿Quién es responsable de realizar las Pruebas de Integración?",
+        options: [
+            "Solo el cliente",
+            "Desarrolladores / DevOps / QA Técnico",
+            "Solo el gerente de proyecto",
+            "Los usuarios finales"
+        ],
+        correct: 1
+    },
+    {
+        type: "multiple",
+        category: "Riesgo vs Problema",
+        question: "¿Cuál es la distinción esencial entre un Riesgo y un Problema respecto al tiempo?",
+        options: [
+            "El riesgo es más importante",
+            "El Riesgo es futuro (potencial), el Problema es presente (real)",
+            "El riesgo es técnico, el problema es gerencial",
+            "No hay diferencia"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Objetivo de Gestión de Riesgos",
+        question: "Complete: El objetivo de la gestión de riesgos es evitar que los Riesgos se conviertan en _____.",
+        answer: "problemas",
+        hints: ["Incidentes", "Realidad", "Presente"]
+    },
+    {
+        type: "multiple",
+        category: "Evaluación de Riesgos",
+        question: "¿Cuáles son las dos dimensiones utilizadas para evaluar cualitativamente un riesgo?",
+        options: [
+            "Costo y Tiempo",
+            "Probabilidad e Impacto",
+            "Frecuencia y Duración",
+            "Urgencia e Importancia"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Severidad de Riesgo",
+        question: "Complete: La Severidad o Nivel de Riesgo se calcula como Probabilidad _____ Impacto.",
+        answer: "por",
+        hints: ["Multiplicado", "X", "Símbolo: x"]
+    },
+    {
+        type: "multiple",
+        category: "Zona Roja de Riesgos",
+        question: "¿Qué representan los riesgos ubicados en la 'Zona Roja' de la Matriz de Probabilidad e Impacto?",
+        options: [
+            "Riesgos aceptables",
+            "Riesgos de baja prioridad",
+            "Riesgos Críticos que requieren plan de respuesta inmediato",
+            "Riesgos ya resueltos"
+        ],
+        correct: 2
+    },
+    {
+        type: "multiple",
+        category: "Estrategia Mitigar",
+        question: "¿Qué implica la estrategia de Mitigar un riesgo?",
+        options: [
+            "Eliminarlo completamente",
+            "Tomar acciones proactivas para reducir probabilidad y/o impacto",
+            "Pasarlo a un tercero",
+            "No hacer nada"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Estrategia Transferir",
+        question: "Complete: Transferir un riesgo implica pasar la responsabilidad a un _____ como AWS con SLA garantizado.",
+        answer: "tercero",
+        hints: ["Otra entidad", "Proveedor externo", "No nosotros"]
+    },
+    {
+        type: "multiple",
+        category: "Estrategia Aceptar",
+        question: "¿Qué implica la estrategia de Aceptar un riesgo?",
+        options: [
+            "Siempre hacer algo al respecto",
+            "Reconocer el riesgo y decidir no tomar acciones preventivas",
+            "Transferirlo al cliente",
+            "Eliminarlo del registro"
+        ],
+        correct: 1
+    },
+    {
+        type: "multiple",
+        category: "Disparador de Riesgo",
+        question: "¿Qué es el 'Disparador' (Trigger) de un riesgo?",
+        options: [
+            "La causa del riesgo",
+            "El impacto del riesgo",
+            "La señal de alerta que indica que el riesgo está a punto de ocurrir",
+            "El costo de mitigarlo"
+        ],
+        correct: 2
+    },
+    {
+        type: "complete",
+        category: "Fórmula de Riesgo",
+        question: "Complete: La estructura formal de un riesgo es: 'Debido a [CAUSA], existe el riesgo de que ocurra [_____], lo que resultaría en [EFECTO]'.",
+        answer: "evento incierto",
+        hints: ["Lo que podría pasar", "Incertidumbre", "Riesgo futuro"]
+    },
+    {
+        type: "multiple",
+        category: "Plan de Respuesta",
+        question: "¿Qué dos tipos de acciones debe incluir el Plan de Respuesta para un riesgo crítico?",
+        options: [
+            "Acciones técnicas y administrativas",
+            "Acciones Preventivas (AHORA) y Acciones de Contingencia (DESPUÉS)",
+            "Acciones rápidas y acciones lentas",
+            "Acciones obligatorias y opcionales"
+        ],
+        correct: 1
+    },
+    {
+        type: "complete",
+        category: "Registro de Riesgos",
+        question: "Complete: El _____ de Riesgos es un repositorio central y vivo donde se gestiona toda la información de riesgos.",
+        answer: "registro",
+        hints: ["Risk Register", "Documento central", "Lista maestra"]
+    },
+    {
+        type: "multiple",
+        category: "Siguiente Paso después de EDT",
+        question: "Después de crear la EDT/WBS, ¿cuál es el siguiente paso fundamental?",
+        options: [
+            "Comenzar a codificar",
+            "Contratar personal",
+            "La estimación de esfuerzo, costo y tiempo",
+            "Hacer pruebas"
+        ],
+        correct: 2
+    },
+    {
+        type: "multiple",
+        category: "Nodo en Diagrama",
+        question: "¿Cómo se dibuja un 'Nodo' en el Diagrama de Despliegue?",
+        options: [
+            "Como un círculo",
+            "Como una flecha",
+            "Como una caja 3D (un cubo)",
+            "Como un rectángulo plano"
+        ],
+        correct: 2
+    },
+    {
+        type: "complete",
+        category: "Arquitectura y RNF",
+        question: "Complete: Los RNF indican cómo de _____ debe hacerlo el sistema, imponiendo restricciones y definiendo la estructura.",
+        answer: "bien",
+        hints: ["Calidad", "Qué tan bien", "Nivel de desempeño"]
+    },
+    {
+        type: "multiple",
+        category: "Decisiones Arquitectónicas",
+        question: "¿Qué define la Arquitectura de Software?",
+        options: [
+            "Solo el código fuente",
+            "Las decisiones estructurales de más alto nivel sobre un sistema",
+            "La interfaz de usuario",
+            "El presupuesto del proyecto"
+        ],
+        correct: 1
+    },
+    {
+        type: "multiple",
+        category: "Arquitectura Monolítica - Desventaja",
+        question: "¿Cuál es una principal desventaja de la Arquitectura Monolítica?",
+        options: [
+            "Es muy cara",
+            "Es difícil de escalar, mantener y actualizar",
+            "Requiere muchos servidores",
+            "No se puede documentar"
+        ],
+        correct: 1
+    },
+    {
+        type: "multiple",
+        category: "Arquitectura Orientada a Eventos",
+        question: "Si un RNF requiere soportar 5,000 usuarios concurrentes, ¿hacia qué tipo de arquitectura se podría empujar el diseño?",
+        options: [
+            "Arquitectura Monolítica",
+            "Arquitectura en Capas simple",
+            "Microservicios o Arquitectura Orientada a Eventos",
+            "Arquitectura Cliente-Servidor básica"
+        ],
+        correct: 2
     }
 ];
 
